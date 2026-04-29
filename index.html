@@ -210,36 +210,15 @@
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
     }
-    /* Padrão visual — Tela Soldada (grade quadrada) */
-    .svc-img.soldada {
-      background-color: #1B3063;
-      background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(255,255,255,.55) 29px, rgba(255,255,255,.55) 31px),
-        repeating-linear-gradient(90deg, transparent, transparent 29px, rgba(255,255,255,.55) 29px, rgba(255,255,255,.55) 31px);
-    }
-    /* Padrão visual — Alambrado (losango) */
-    .svc-img.alambrado {
-      background-color: #7B1A1A;
-      background-image:
-        repeating-linear-gradient(45deg, rgba(255,255,255,.45) 0px, rgba(255,255,255,.45) 1.5px, transparent 1.5px, transparent 21px),
-        repeating-linear-gradient(-45deg, rgba(255,255,255,.45) 0px, rgba(255,255,255,.45) 1.5px, transparent 1.5px, transparent 21px);
-    }
-    /* Padrão visual — Ondulada (hexagonal) */
-    .svc-img.ondulada {
-      background-color: #14472A;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 0v34m28-50v34M0 50v34m28-2l28-16m-56 0l28 16' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='1.5'/%3E%3C/svg%3E");
-    }
-    /* Padrão visual — Industrial (grade fina) */
-    .svc-img.industrial {
-      background-color: #2D1B69;
-      background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 9px, rgba(255,255,255,.4) 9px, rgba(255,255,255,.4) 10px),
-        repeating-linear-gradient(90deg, transparent, transparent 9px, rgba(255,255,255,.4) 9px, rgba(255,255,255,.4) 10px);
-    }
-    /* Overlay para fotos reais (se adicionadas via img tag) */
+    .svc-img.soldada   { background-color: #1B3063; }
+    .svc-img.alambrado { background-color: #4a1010; }
+    .svc-img.ondulada  { background-color: #14472A; }
+    .svc-img.industrial{ background-color: #1a1a2e; }
     .svc-img img {
       position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      transition: transform .4s ease;
     }
+    .svc-card:hover .svc-img img { transform: scale(1.04); }
     .svc-img-label {
       position: absolute; bottom: 12px; left: 12px;
       background: rgba(0,0,0,.6); color: #fff;
@@ -536,8 +515,8 @@
       <!-- Tela Soldada -->
       <div class="svc-card">
         <div class="svc-img soldada">
-          <!-- Para usar foto real: <img src="foto-tela-soldada.jpg" alt="Tela Soldada"> -->
-          <div class="svc-img-label">Grade Soldada</div>
+          <img src="https://images.unsplash.com/photo-1568066857856-da0bebb1ec80?w=800&q=80&auto=format&fit=crop" alt="Tela Soldada" loading="lazy" />
+          <div class="svc-img-label">Tela Soldada</div>
         </div>
         <div class="svc-body">
           <h3>Telas Soldadas</h3>
@@ -552,8 +531,8 @@
       <!-- Alambrado -->
       <div class="svc-card">
         <div class="svc-img alambrado">
-          <!-- Para usar foto real: <img src="foto-alambrado.jpg" alt="Alambrado"> -->
-          <div class="svc-img-label">Malha Losango</div>
+          <img src="https://images.unsplash.com/photo-1517265598349-76511a2fb389?w=800&q=80&auto=format&fit=crop" alt="Alambrado" loading="lazy" />
+          <div class="svc-img-label">Alambrado</div>
         </div>
         <div class="svc-body">
           <h3>Alambrado</h3>
@@ -568,8 +547,8 @@
       <!-- Ondulada -->
       <div class="svc-card">
         <div class="svc-img ondulada">
-          <!-- Para usar foto real: <img src="foto-tela-ondulada.jpg" alt="Tela Ondulada"> -->
-          <div class="svc-img-label">Malha Hexagonal</div>
+          <img src="https://images.unsplash.com/photo-1574982114575-bf14c00c9fa9?w=800&q=80&auto=format&fit=crop" alt="Tela Ondulada" loading="lazy" />
+          <div class="svc-img-label">Tela Ondulada</div>
         </div>
         <div class="svc-body">
           <h3>Telas Onduladas</h3>
@@ -584,8 +563,8 @@
       <!-- Industrial -->
       <div class="svc-card">
         <div class="svc-img industrial">
-          <!-- Para usar foto real: <img src="foto-tela-industrial.jpg" alt="Tela Industrial"> -->
-          <div class="svc-img-label">Grade Industrial</div>
+          <img src="https://images.unsplash.com/photo-1648583189779-536c76a17957?w=800&q=80&auto=format&fit=crop" alt="Tela Industrial" loading="lazy" />
+          <div class="svc-img-label">Tela Industrial</div>
         </div>
         <div class="svc-body">
           <h3>Telas Industriais</h3>
